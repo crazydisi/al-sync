@@ -24,3 +24,4 @@ Style: We use date-based entries (not semver releases) and Keep a Changelog cate
 - Workflow to ensure the `dependencies` label exists so Dependabot can label its PRs.
 - Dependabot auto-merge workflow: pass `pull-request-number` to fix missing input error and enable auto-merge when checks pass.
 - `package.json` `start` now runs `nodemon` so the daemon restarts on code/config changes.
+- Ensure-labels workflow no longer runs on every push; now triggers on demand and daily at 15:50 UTC before Dependabot to self-heal labels without adding noise to pushes.

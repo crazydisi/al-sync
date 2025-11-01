@@ -1,8 +1,10 @@
 name: Ensure Labels
 on:
-  push:
-    branches: [ main, master ]
   workflow_dispatch:
+  schedule:
+    # Run daily before Dependabot (18:00 Europe/Berlin ~= 16:00/17:00 UTC).
+    # 15:50 UTC is safely before both DST/standard time cases.
+    - cron: '50 15 * * *'
 
 permissions:
   contents: read
