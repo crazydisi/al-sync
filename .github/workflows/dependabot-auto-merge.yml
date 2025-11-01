@@ -1,0 +1,29 @@
+name: Dependabot Auto-Merge
+on:
+  pull_request_target:
+    types: [opened, labeled, edited, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  automerge:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Enable GitHub's auto-merge for safe Dependabot updates
+      - name: Enable auto-merge for minor, patch, and security updates
+        if: |
+          steps.metadata.outputs.update-type == 'version-update:semver-minor' ||
+          steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+          steps.metadata.outputs.update-type == 'security'
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          merge-method: squash
+

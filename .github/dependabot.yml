@@ -1,0 +1,29 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "18:00"
+      timezone: "Europe/Berlin"
+    versioning-strategy: increase-if-necessary
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "deps(npm)"
+      include: "scope"
+    groups:
+      minor-and-patch:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: weekly
+    labels:
+      - "dependencies"
+

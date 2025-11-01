@@ -1,7 +1,7 @@
 {
   "mappings": [
     {
-      "file": "src/mage.js",
+      "file": "../al-scripts/Mage/mage.js",
       "name": "Mage",
       "slot": 13
     }

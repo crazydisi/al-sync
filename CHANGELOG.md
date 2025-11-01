@@ -1,29 +1,22 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project are documented here.
 
-The format is loosely based on [Keep a Changelog](https://keepachangelog.com/) and follows semantic versioning where possible.
+Style: We use date-based entries (not semver releases) and Keep a Changelog categories. Add your notes under Unreleased, then periodically snapshot them under a dated heading.
 
-## [Unreleased]
+## 2025-11-01
 
-- Placeholder for upcoming changes.
+### Added
 
-## [1.0.1] - 2025-11-01
+- Core script `al-sync.js` to watch files and upload on save.
+- NPM scripts: `npm start` and `npm run once`.
+- Dependencies: `chokidar`, `dotenv`, `minimist`, `p-retry`, `undici`.
+- VSCode tasks to simplify running the program.
+- This `CHANGELOG.md` file.
 
-Improved quality of life.
+### Changed
 
-- Added VSCode tasks to make it easier to run the programm.
-- Added this CHANGELOG.md file to documentate changes
-- Fixed .gitignore to exclude `al-sync.config.json` instead of `al-sync.config.js`
-
-## [1.0.0] - 2025-11-01
-
-Initial release.
-
-- Project: al-sync — Watch a local file and upload to Adventure Land code slot via API on save.
-- Features:
-  - Add `al-sync.js` to watch files and upload on save.
-  - Added `npm start` and `npm run once` scripts.
-- Dependencies: chokidar, dotenv, minimist, p-retry, undici.
-
-Maintainers: keep this file updated for users and for release notes automation.
+- `.gitignore`: exclude `al-sync.config.json` (was `al-sync.config.js`).
+- Dependabot config for npm and GitHub Actions to open scheduled update PRs.
+- CI workflow (Node 24) running `npm ci`, optional tests, and `npm audit --audit-level=high` on PRs and pushes.
+- Workflow to enable GitHub auto-merge for Dependabot minor, patch, and security updates once checks pass.
