@@ -25,5 +25,5 @@ jobs:
           steps.metadata.outputs.update-type == 'security'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
+          pull-request-number: ${{ github.event.pull_request.number }}
           merge-method: squash
-
