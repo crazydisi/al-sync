@@ -1,6 +1,6 @@
 # Project specific ignores
 .env
-al-sync.config.js
+al-sync.config.json
 
 # Logs
 logs

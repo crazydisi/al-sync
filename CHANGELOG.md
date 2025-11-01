@@ -14,6 +14,7 @@ Improved quality of life.
 
 - Added VSCode tasks to make it easier to run the programm.
 - Added this CHANGELOG.md file to documentate changes
+- Fixed .gitignore to exclude `al-sync.config.json` instead of `al-sync.config.js`
 
 ## [1.0.0] - 2025-11-01
 
