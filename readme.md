@@ -164,5 +164,4 @@ node .\al-sync.js
 Built to mimic the Adventure Land in-browser save/load payload so you can iterate locally and push code to your slots quickly.
 
 ---
-
-If anything in this README is unclear or something needs to be added feel free to apply a merge request.
+If you spot errors, have improvements, or want to add content, please open a merge request — contributions are welcome to help improve this project.
