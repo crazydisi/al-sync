@@ -13,6 +13,7 @@ Style: We use date-based entries (not semver releases) and Keep a Changelog cate
 - Dependencies: `chokidar`, `dotenv`, `minimist`, `p-retry`, `undici`.
 - VSCode tasks to simplify running the program.
 - This `CHANGELOG.md` file.
+- Default auto-reload via `nodemon` with `.nodemon.json` watching `al-sync.js`, `al-sync.config.json`, `.env`, and `package.json`.
 
 ### Changed
 
@@ -22,3 +23,4 @@ Style: We use date-based entries (not semver releases) and Keep a Changelog cate
 - Workflow to enable GitHub auto-merge for Dependabot minor, patch, and security updates once checks pass.
 - Workflow to ensure the `dependencies` label exists so Dependabot can label its PRs.
 - Dependabot auto-merge workflow: pass `pull-request-number` to fix missing input error and enable auto-merge when checks pass.
+- `package.json` `start` now runs `nodemon` so the daemon restarts on code/config changes.

@@ -1,0 +1,17 @@
+{
+  "watch": [
+    "al-sync.js",
+    "al-sync.config.json",
+    ".env",
+    "package.json"
+  ],
+  "ext": "js,json,env",
+  "ignore": [
+    "node_modules/**",
+    ".git/**"
+  ],
+  "delay": "200ms",
+  "exec": "node al-sync.js",
+  "signal": "SIGTERM"
+}
+
