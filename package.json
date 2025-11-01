@@ -9,7 +9,7 @@
     "once": "node al-sync.js --once"
   },
   "dependencies": {
-    "chokidar": "^3.6.0",
+    "chokidar": "^4.0.3",
     "dotenv": "^16.4.5",
     "minimist": "^1.2.8",
     "p-retry": "^6.2.0",
