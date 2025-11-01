@@ -1,0 +1,11 @@
+{
+  "mappings": [
+    {
+      "file": "/absolute/or/relative/path/to/ranger.js",
+      "name": "ranger",
+      "slot": 1
+    }
+  ],
+  "debounceMs": 150,
+  "concurrency": 1
+}

@@ -1,0 +1,11 @@
+{
+  "mappings": [
+    {
+      "file": "src/mage.js",
+      "name": "Mage",
+      "slot": 13
+    }
+  ],
+  "debounceMs": 150,
+  "concurrency": 1
+}

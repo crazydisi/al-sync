@@ -1,0 +1,18 @@
+{
+  "name": "al-sync",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Watch a local file and upload to Adventure Land code slot via API on save.",
+  "scripts": {
+    "start": "node al-sync.js",
+    "once": "node al-sync.js --once"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "minimist": "^1.2.8",
+    "p-retry": "^6.2.0",
+    "undici": "^6.19.8"
+  }
+}
