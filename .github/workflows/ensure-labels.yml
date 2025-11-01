@@ -1,0 +1,21 @@
+name: Ensure Labels
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  create-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure 'dependencies' label exists
+        uses: peter-evans/create-or-update-label@v5
+        with:
+          name: dependencies
+          color: 0366d6
+          description: Dependency update pull requests
+

@@ -20,3 +20,4 @@ Style: We use date-based entries (not semver releases) and Keep a Changelog cate
 - Dependabot config for npm and GitHub Actions to open scheduled update PRs.
 - CI workflow (Node 24) running `npm ci`, optional tests, and `npm audit --audit-level=high` on PRs and pushes.
 - Workflow to enable GitHub auto-merge for Dependabot minor, patch, and security updates once checks pass.
+- Workflow to ensure the `dependencies` label exists so Dependabot can label its PRs.
